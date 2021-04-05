@@ -157,6 +157,7 @@ function NumberList(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     // Wrong! The key should have been specified here:
+    // Top comment can be misleading! In this situration, if we have <ListItem> in map functor, these component also need key or we got error in console.log, you can test this issue.
     <ListItem value={number} />
   );
   return (
